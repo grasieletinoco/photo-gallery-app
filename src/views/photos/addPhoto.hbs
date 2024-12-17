@@ -1,0 +1,15 @@
+<div class="container mt-4 mb-4">
+    <h2 class="titulo-form">Adicionar Foto</h2>
+    <form action="/photos/add" method="POST" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="image" class="form-label">Imagem</label>
+            <input type="file" class="form-control" id="image" name="image" accept="image/*" required>
+        </div>
+        <div class="mb-3">
+            <label for="title" class="form-label">Titulo</label>
+            <input type="text" class="form-control" id="title" name="title" required>
+        </div>
+        <button type="submit" class="btn btn-success">Enviar</button>
+        <a class="btn btn-secondary" href="/">Cancelar</a>
+    </form>
+</div>

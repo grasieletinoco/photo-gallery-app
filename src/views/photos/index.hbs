@@ -1,0 +1,31 @@
+<div class="container pt-5 mb-4">
+    <h1 class="titulo">Galeria de Fotos</h1>
+    {{#if photos.length}}
+        <div class="row row-cols-1">
+            {{#each photos}}
+                <div class="col-lg-3 col-md-4 col-sm-6 g-4">
+                    <div class="card pt-3 pb-0 px-3 shadow rounded-3">
+                        <div class="imagem bg-dark">
+                            <img src="/uploads/{{this.image}}" class="img-fluid" alt="{{this.title}}">
+                        </div>                                                 
+                        <div class="card-body">
+                            <h5 class="card-title text-center pt-2">{{this.title}}</h5>
+                            <div class="d-flex justify-content-end pt-4">
+                                <div class="btn-group">
+                                    <a href="/photos/edit/{{this.id}}" class="btn btn-outline-success ">Editar</a>
+                                    <a href="/photos/delete/{{this.id}}" class="btn btn-outline-danger">Excluir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    {{else}}
+      <div class="col-12 text-center">
+        <div class="alert alert-secondary" role="alert">
+          Não há fotos na galeria. Adicione uma foto para começar!
+        </div>
+      </div>
+    {{/if}}
+</div>

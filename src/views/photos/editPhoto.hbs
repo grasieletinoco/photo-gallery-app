@@ -1,0 +1,18 @@
+<div class="container mt-4 mb-4">
+    <h2 class="titulo-form">Editar Foto</h2>
+    <form action="/photos/edit/{{photo.id}}" method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <img class="photo-edit" src="/uploads/{{photo.image}}" alt="Imagem Atual" />
+            </div>  
+            <div class="mb-3">
+                <label for="image" class="form-label">Alterar Imagem (opcional): </label>
+                <input type="file" class="form-control" id="image" name="image" accept="image/*">
+            </div>
+            <div class="mb-3">
+            <label for="title" class="form-label">Titulo</label>
+            <input type="text" class="form-control" id="title" name="title" value="{{photo.title}}" required>
+        </div>
+        <button type="submit" class="btn btn-success">Alterar</button>
+        <a class="btn btn-secondary" href="/">Cancelar</a> 
+    </form>
+</div>
