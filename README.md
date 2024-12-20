@@ -35,7 +35,7 @@ A interface foi projetada para ser simples e amigável. Ao acessar o site, o usu
 ## ⚙️ Configuração e Instalação
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/photo-gallery.git
+   git clone https://github.com/grasieletinoco/photo-gallery-app.git
    ```
 
 2. Instale as dependências:
