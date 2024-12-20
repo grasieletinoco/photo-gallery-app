@@ -43,7 +43,7 @@ A interface foi projetada para ser simples e amigável. Ao acessar o site, o usu
    npm install
    ```
 
-3. Configure as variáveis de ambiente no arquivo `.env`:
+3.  Crie um arquivo .env na raiz do projeto e configure as variáveis de ambiente:
    ```env
    NODE_ENV=development
    DB_NAME=photogallery
@@ -54,12 +54,22 @@ A interface foi projetada para ser simples e amigável. Ao acessar o site, o usu
    DB_PORT=3306
    ```
 
-4. Execute o servidor:
+4. Crie o Banco de Dados:
    ```bash
-   npm start
+   photogallery
    ```
 
-5. Acesse a aplicação em `http://localhost:3000`.
+5. Execute as migrations para criar as tabelas no banco de dados:
+   ```bash
+   npx sequelize-cli db:migrate
+   ```   
+
+6. Execute o servidor:
+   ```bash
+   node app.js
+   ``` 
+
+7. Acesse a aplicação em `http://localhost:3000`.
 
 
 ## 🚀 Uso
